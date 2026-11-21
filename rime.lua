@@ -23,3 +23,5 @@ calculator_translator = require("calculator_translator")  --简易计算器
 exe_processor = require("exe")  -- 网页启动器
 shijian2_translator = require("shijian2") -- 高级时间
 smart_shift = require("select_mode") -- 中英文切换
+quote_style = require("quote_style") --引号字形:弯引号↔直角引号
+quote_key = require("quote_key") --直角引号下按 ' 直接出引号

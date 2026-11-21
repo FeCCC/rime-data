@@ -47,6 +47,8 @@ switches: # 0 默认关，1 默认开
   - name: ascii_punct
     reset: 0
     states: [ 。，, ．， ]
+  - name: corner_quotes
+    states: [ "“”", "「」" ]
   # - name: dz_ci  #过滤词组
   #   reset: 0
   #   states: [ 词组, 单字 ]

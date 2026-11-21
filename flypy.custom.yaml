@@ -51,3 +51,5 @@ patch:
       - {accept: "Shift+space", toggle: full_shape, when: always} #切换全半角
       - {accept: "Control+period", toggle: ascii_punct, when: always} #切换中英标点
       - {accept: "Control+j", toggle: simplification, when: always} #切换简繁
+  "engine/filters/@next": lua_filter@quote_style
+  "engine/processors/@before 0": lua_processor@quote_key

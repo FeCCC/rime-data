@@ -1,0 +1,9 @@
+# luna_pinyin_fluency.custom.yaml
+# encoding: utf-8
+# 引号字形开关(弯引号 / 直角引号),配合 lua/quote_style.lua
+
+patch:
+  "switches/@next":
+    name: corner_quotes
+    states: ["“”", "「」"]
+  "engine/filters/@next": lua_filter@quote_style

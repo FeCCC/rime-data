@@ -25,6 +25,8 @@ switches:
   - name: ascii_punct
    # states: [ 。，, ．， ]
     reset: 0
+  - name: corner_quotes
+    states: [ "“”", "「」" ]
 
 engine:
   processors:

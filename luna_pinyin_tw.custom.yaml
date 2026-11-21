@@ -40,6 +40,8 @@ patch:
       states: ["漢字", "汉字"]
     - name: ascii_punct
       states: ["。，", "．，"]
+    - name: corner_quotes
+      states: ["“”", "「」"]
 
   simplifier:
     option_name: simplification
@@ -69,6 +71,7 @@ patch:
       - simplifier
       - uniquifier
       - cjk_minifier  #過濾拼音輸入法中的罕用字
+      - lua_filter@quote_style
   translator:
     enable_charset_filter: true #启用罕见字過濾
 

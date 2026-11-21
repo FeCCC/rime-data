@@ -38,6 +38,8 @@ patch:
       states: ["漢字", "汉字"]
     - name: ascii_punct
       states: ["。，", "．，"]
+    - name: corner_quotes
+      states: ["“”", "「」"]
     - options: ["utf8", "gbk", "gb2312"] # (※2)字符集选单
       reset: 0 #     默认 UTF
       states:
@@ -57,6 +59,7 @@ patch:
     - uniquifier
     - charset_filter@gbk # (※3) GBK 过滤
     - single_char_filter
+    - lua_filter@quote_style
 
   emoji_conversion:
     opencc_config: emoji.json
@@ -123,7 +126,7 @@ patch:
       "/": ["/", "÷"]
       '\': "、"
       "_": "──"
-      "'": { pair: ["「", "」"] }
+      # "'": { pair: ["「", "」"] }   # 交给 corner_quotes 开关(lua/quote_style.lua)处理
       "[": ["【", "["]
       "]": ["】", "]"]
       "$": ["¥", "$", "€", "£", "¢", "¤"]

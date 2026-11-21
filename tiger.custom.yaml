@@ -62,3 +62,5 @@ patch:
 
   # 让【 】可以直接上屏（对应的重复上屏的功能也没了）
   #speller/alphabet: ";'zyxwvutsrqponmlkjihgfedcba"
+  "engine/filters/@next": lua_filter@quote_style
+  "engine/processors/@before 0": lua_processor@quote_key
